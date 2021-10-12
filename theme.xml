@@ -1,23 +1,35 @@
-<!--
-theme name:     Base-Text
-Creator:        Matt Gonzales (Jetup)
--->
-
 <?xml version="1.0" encoding="UTF-8"?>
-<theme>
+	<theme defaultView="grid">
     <formatVersion>7</formatVersion>
-   
     <feature supported="carousel">
-    <view name="system">	
-   <carousel name="systemcarousel">
-			<type>vertical</type>
-			<pos>0.009 0</pos>
-			<size>0.7 1</size>
-			<color>00000000</color>
-			<origin>0 0</origin>
-			<logoAlignment>left</logoAlignment>
-			<maxLogoCount>7</maxLogoCount>
-    </carousel>
+	
+   <view name="system">
+      <carousel name="systemcarousel">
+        <type>vertical</type>
+        <pos>0.002 0.0</pos>
+        <logoAlignment>left</logoAlignment>         
+        <size>0.8 0.934</size>
+        <logoScale>1</logoScale>
+        <zIndex>99</zIndex>          
+        <logoSize>0.20 0.2</logoSize>
+        <color>00000000</color>
+        <maxLogoCount>5</maxLogoCount>       
+      </carousel>
+	  
+	  	<image name="logo">
+			<path>./assets/logos/${system.theme}.png</path>
+			<zIndex>98</zIndex>  
+		</image>
+	  
+	 <text name="systemInfo">     
+         <pos>0.25 0.85</pos>
+         <backgroundColor>00000000</backgroundColor>
+         <color>808080</color>
+		 <glowColor>ffffff</glowColor> 
+         <fontPath>./Roboto-Regular.ttf</fontPath>
+	     <fontSize>0.05</fontSize>
+         <zIndex>97</zIndex>	     
+     </text>             
 
     <text name="logoText">
          <fontPath>./Roboto-Regular.ttf</fontPath>
@@ -28,13 +40,6 @@ Creator:        Matt Gonzales (Jetup)
          <color>ffffff</color>
     </text>
 	  
-    <text name="systemInfo">     
-         <pos>0.0 0.0</pos>
-         <backgroundColor>00000000</backgroundColor>
-         <fontPath>./Roboto-Regular.ttf</fontPath>
-	     <fontSize>0.05</fontSize>
-         <zIndex>5</zIndex>	     
-    </text> 
 	<image name="background2" extra="static">
 			<path>./assets/overlay.png</path>
 			<size>1 1</size>
@@ -47,128 +52,152 @@ Creator:        Matt Gonzales (Jetup)
 			<pos>0.229166666666667 0</pos>
 			<size>0.770833333333333 1</size>
 			<path>{random:image}</path>
+			<zIndex>29</zIndex>
 	</image>
     </view>
     </feature>
   
-    <view name="system,detailed,video,basic">
-    <helpsystem name="help">
-         <fontPath>./Roboto-Regular.ttf</fontPath>  
-         <fontSize>0.00</fontSize>
-		 <pos>0.0 -1</pos>
-		 <textColor>ffffff</textColor>
-		 <iconColor>ffffff</iconColor>
-    </helpsystem>
-    </view>  
-   
-    <view name="basic">
-    <text name="description" extra="true">
-         <pos>0.605 0.685</pos>
-         <size>0.347 0.183</size>
-         <alignment>center</alignment>
-         <color>ffffff</color>
-         <fontSize>0.025</fontSize>
-         <text>No Information Available</text>
-         <fontPath>./Roboto-Regular.ttf</fontPath>
-    </text>
-    </view>
-  
-    <view name="basic, detailed, video">
-    <image name="background" extra="true">
-         <size>1 1</size>
-         <pos>0 0</pos>
-         <origin>0 0</origin>
-         <path>./assets/bg.png</path>
-         <zIndex>0</zIndex>
-         <color>10667f</color>
-    </image>
-
-    <textlist name="gamelist">
-         <selectorColor>00000000</selectorColor>
-         <selectedColor>0F6585</selectedColor>
-         <primaryColor>ffffff</primaryColor>
-         <secondaryColor>ffffff</secondaryColor>
-         <fontPath>./Roboto-Regular.ttf</fontPath>
-         <fontSize>0.032</fontSize>
-         <pos>0.01 0.170</pos>
-         <size>0.6 0.70</size>
-         <alignment>left</alignment>
-         <horizontalMargin>0.01</horizontalMargin>
-         <origin>0 0</origin>
-         <lineSpacing>2.1</lineSpacing>
-         <selectorOffsetY>-0.01</selectorOffsetY>
-         <selectorHeight>0.0675</selectorHeight>
-    </textlist>
-	
-    <text name="system_name" extra="true">
-         <text>${system.fullName}</text>
-         <forceUppercase>0</forceUppercase>
-         <size>0.5 0.025</size>
-         <pos>0.02 0.025</pos>
-         <color>ffffff</color>
-         <fontPath>./Roboto-Regular.ttf</fontPath>
-         <fontSize>0.04</fontSize>
-         <zIndex>2</zIndex>
-    </text>
-	
-    <text name="md_lbl_genre, md_genre, md_lbl_rating, md_lbl_developer, md_lbl_publisher, md_publisher, md_lbl_lastplayed, md_lbl_playcount, md_playcount, md_lbl_releasedate">
-         <visible>false</visible>
-    </text>
-	
-    <rating name="md_rating">
-         <visible>false</visible>
-    </rating>
-	
-    <image name="md_thumbnail">
-         <visible>false</visible>
-    </image>
-	
-    <video name="md_video">
-         <origin>0.5 0.5</origin>
-         <pos>0.776 0.388</pos>
-         <maxSize>0.347 0.46</maxSize>
-         <delay>0.7</delay>
-         <showSnapshotNoVideo>true</showSnapshotNoVideo>
-         <showSnapshotDelay>true</showSnapshotDelay>
-         <snapshotSource>image</snapshotSource>
-		 <effect>none</effect>
-    </video>
-	
-    <text name="md_description">
-         <pos>0.605 0.685</pos>
-         <size>0.347 0.183</size>
-         <color>ffffff</color>
-         <fontSize>0.025</fontSize>
-         <fontPath>./Roboto-Regular.ttf</fontPath>
-    </text>
-    </view>
-   
-    <view name="menu">
+     <view name="menu">
     <menuBackground name="menubg">
-         <color>ffffff</color>
+         <color>008080</color>
     </menuBackground>
 	
 	<menuText name="menutext, menutitle">
          <fontPath>./Roboto-Regular.ttf</fontPath>
-         <fontSize>.039</fontSize>
+         <fontSize>.035</fontSize>
          <color>000000</color>
     </menuText>
 	
 	<menuText name="menufooter, menutextsmall">
-         <fontPath>./Lato-Bold.otf</fontPath>
-         <fontSize>.029</fontSize>		 
+         <fontPath>./Roboto-Regular.ttf</fontPath>
+         <fontSize>.024</fontSize>		 
          <color>000000</color>
     </menuText>
 	</view>
   
+    <view name="system, grid">
+    <helpsystem name="help">
+      <origin>-9 1</origin>
+    </helpsystem>
+    </view>  
+       
   	<view name="screen">
          <text name="clock">
-	     <color>ffffff</color>
+	     <color>808080</color>
+		 <glowColor>ffffff</glowColor> 
 	     <fontPath>./Roboto-Regular.ttf</fontPath>
          <fontSize>0.04</fontSize>
-         <pos>0.48 0.0</pos>
+         <pos>0.48 0.0.5</pos>
          <size>0.5 0.058</size>
+		 <zIndex>90</zIndex>
     </text>
     </view>
-  
+	
+	<view name="grid">
+		<image name="gridOverlay" extra="true">
+			<path>./assets/tileoverlay.png</path>
+			<size>1 1</size>
+			<pos>0 0</pos>
+			<origin>0 0</origin>
+			<zIndex>8</zIndex>
+		</image>
+
+		<imagegrid name="gamegrid">
+			<pos>0.052083333333333 0.199074074074074</pos>
+			<size>0.895833333333333 0.62962962962963</size>
+			<autoLayout>3 2</autoLayout>
+			<margin>-0 0</margin>
+			<autoLayoutSelectedZoom>1.15</autoLayoutSelectedZoom>
+		</imagegrid>
+
+		<gridtile name="default">
+			<size>0.20 0.277777777777778</size>
+			<backgroundColor>42424200</backgroundColor>
+			<imageColor>A5A5A5ff</imageColor>
+		</gridtile>
+
+		<gridtile name="selected">
+			<size>0.20 0.277777777777778</size>
+			<backgroundColor>42424200</backgroundColor>
+			<imageColor>ffffffff</imageColor>
+		</gridtile>   
+
+		<text name="md_name">
+			<color>ffffff</color>
+			<fontPath>./Roboto-Regular.ttf</fontPath>
+		</text>
+			<imagegrid name="gamegrid">
+			<autoLayout>5 1</autoLayout>
+			<scrollLoop>true</scrollLoop>
+			<autoLayoutSelectedZoom>1</autoLayoutSelectedZoom>
+			<imageSource>thumbnail</imageSource>
+			<margin>0.00625 0.011111111111111</margin>
+			<size>0.895833333333333 0.342592592592593</size>
+			<pos>0.052083333333333 0.637037037037037</pos>
+			<showVideoAtDelay>800</showVideoAtDelay>
+			<animateSelection>true</animateSelection>
+			<zIndex>10</zIndex>
+	</imagegrid>
+	<video name="md_video">
+			<pos>0 -0.3</pos>
+			<size>1 1</size>
+			<zIndex>6</zIndex>
+			<origin>0 0</origin>
+			<delay>1</delay>
+			<showSnapshotNoVideo>true</showSnapshotNoVideo>
+			<showSnapshotDelay>true</showSnapshotDelay>
+			<loops>10</loops>
+			<effect>none</effect>
+	</video>
+	<imagegrid name="gamegrid">
+			<showVideoAtDelay>-1</showVideoAtDelay>
+	</imagegrid>
+	<gridtile name="default">
+			<backgroundCenterColor>40404080</backgroundCenterColor>
+			<backgroundEdgeColor>00000000</backgroundEdgeColor>
+			<padding>4 4</padding>
+			<imageSizeMode>minSize</imageSizeMode>
+			<backgroundCornerSize>0 0</backgroundCornerSize>
+			<backgroundColor>42424200</backgroundColor>
+			<imageColor>6d6d6dFF</imageColor>
+	</gridtile>
+	<gridtile name="selected">
+			<padding>4 4</padding>
+			<imageColor>ffffffff</imageColor>
+			<backgroundCornerSize>0</backgroundCornerSize>
+			<backgroundEdgeColor>909090</backgroundEdgeColor>
+	</gridtile>
+	<image name="gridtile.image">
+			<roundCorners>0</roundCorners>
+	</image>
+	
+	<image name="md_marquee">
+			<pos>0.5 0.162037037037037</pos>
+			<origin>0.5 0.5</origin>
+			<maxSize>0.35 0.28</maxSize>
+			<zIndex>100</zIndex>
+	</image>
+	<text name="md_description">
+			<color>ffffff</color>
+			<fontPath>./Roboto-Regular.ttf</fontPath>
+			<fontSize>0.034</fontSize>
+			<alignment>center</alignment>
+			<size>0.8 0.3</size>
+			<pos>0.1 0.3</pos>
+	</text> 
+	<text name="gridtile">
+			<visible>true</visible>
+			<pos>0 0</pos>
+			<size>1 1</size>
+			<fontPath>./Roboto-Regular.ttf</fontPath>
+			<fontSize>0.030</fontSize>
+			<lineSpacing>1.15</lineSpacing>
+			<alignment>center</alignment>
+			<singleLineScroll>false</singleLineScroll>
+			<padding>0 0</padding>      
+			<backgroundColor>00000000</backgroundColor>
+			<glowSize>3</glowSize>
+			<visible>false</visible>
+	</text>
+	</view>
 </theme>
