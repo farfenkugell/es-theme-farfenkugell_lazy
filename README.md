@@ -5,7 +5,7 @@ Grid view idea "borrowed" and customized from https://github.com/20GotoTen/es-th
  <br>
 Features:
 - No system art, image is taken from scrapped games art. Thus you must scrape art in order to see it.
-- ~50MB in size with ~130 systems supported (easyrpg, alg, wolf etc)
+- ~6MB in size with ~130 systems supported (easyrpg, alg, wolf etc)
 - If system has no art, it will show a black screen in there. Still wondering how to get around it
 - Tested on OGA/RGB10 and OGS
 
